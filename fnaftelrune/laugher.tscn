@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://11wiv1h8ib6y"]
+
+[ext_resource type="Script" uid="uid://cwjbtg2pnb813" path="res://laugher.gd" id="1_fi6mq"]
+[ext_resource type="PackedScene" uid="uid://c214awmiwew2k" path="res://the horse.tscn" id="2_ewv7r"]
+[ext_resource type="Texture2D" uid="uid://maumm1dwvqht" path="res://loudfriend.png" id="3_vjklh"]
+[ext_resource type="AudioStream" uid="uid://bk5ud7n5mther" path="res://Woody Laughing.wav" id="4_mbaon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8hef"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(0, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb4rb"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(2682, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vglp"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(3129, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aem2t"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(3576, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgyty"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(4023, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le15s"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(4470, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41nmg"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(4917, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ujk"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(5364, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa0eh"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(5811, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgvuj"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(6258, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynrvr"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(6705, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5qtq"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(7152, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_627vp"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(7599, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj2r7"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(8046, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3vuq"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(8493, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1y2q"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(8940, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8322r"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(9387, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsg84"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(9834, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gfk1"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(10281, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdchi"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(10728, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f20oe"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(11175, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tob2"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(447, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m18nn"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(894, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrkps"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(1341, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglsf"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(1788, 0, 447, 513)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yvq6"]
+atlas = ExtResource("3_vjklh")
+region = Rect2(2235, 0, 447, 513)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8hef")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb4rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vglp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aem2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgyty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le15s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41nmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ujk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa0eh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgvuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynrvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5qtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_627vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj2r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3vuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1y2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8322r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsg84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gfk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdchi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f20oe")
+}],
+"loop": 1,
+"name": &"laughing",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tob2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m18nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrkps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yvq6")
+}],
+"loop": 0,
+"name": &"start-up",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(167, 514)
+
+[node name="Laugher" type="Area2D" unique_id=1376861552]
+script = ExtResource("1_fi6mq")
+horse_scene = ExtResource("2_ewv7r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=801506736]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3xd07")
+animation = &"laughing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1736572708]
+position = Vector2(-19.5, 0)
+shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="LaughSound" type="AudioStreamPlayer2D" parent="." unique_id=715523416]
+stream = ExtResource("4_mbaon")
+volume_db = 24.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

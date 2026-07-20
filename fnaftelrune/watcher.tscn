@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bytwxhxyjb3gw"]
+
+[ext_resource type="Script" uid="uid://lfo51okpic7y" path="res://watcher.gd" id="1_qlspb"]
+[ext_resource type="Texture2D" uid="uid://5bp17uwqw1q2" path="res://friendinsideme1.png" id="2_vjd5f"]
+[ext_resource type="Texture2D" uid="uid://ccs020g1kiigv" path="res://friendinsideme2.png" id="3_0qyk0"]
+[ext_resource type="Texture2D" uid="uid://dfm5wfl0me1mq" path="res://friendinsideme3.png" id="4_cb6vb"]
+[ext_resource type="Texture2D" uid="uid://7hgc2v8po7on" path="res://friendinsideme4.png" id="5_0fvby"]
+[ext_resource type="Texture2D" uid="uid://ksxss3qnfvw6" path="res://friendinsideme5.png" id="6_ixakx"]
+[ext_resource type="Texture2D" uid="uid://bqfr1kxydw4w4" path="res://friendinsideme6.png" id="7_jc5bi"]
+[ext_resource type="Texture2D" uid="uid://d1tuo3lyv3vb0" path="res://friendinsideme7.png" id="8_s1gur"]
+[ext_resource type="Texture2D" uid="uid://bvi7gg8f5mfad" path="res://friendinsideme8.png" id="9_a5mng"]
+[ext_resource type="Texture2D" uid="uid://dnl3xbvxsas85" path="res://friendinsideme9.png" id="10_51bd5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vjd5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0qyk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cb6vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0fvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ixakx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jc5bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s1gur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a5mng")
+}],
+"loop": 0,
+"name": &"appear",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_a5mng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s1gur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jc5bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ixakx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0fvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cb6vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0qyk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vjd5f")
+}],
+"loop": 0,
+"name": &"leave",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("10_51bd5")
+}],
+"loop": 0,
+"name": &"stare",
+"speed": 2.0
+}]
+
+[node name="Watcher" type="Node2D" unique_id=676779059]
+z_index = -1
+script = ExtResource("1_qlspb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=104925896]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1557686858]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3xd07")
+animation = &"stare"
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1099166505]
+wait_time = 5.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=416725460]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
