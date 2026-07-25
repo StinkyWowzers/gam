@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://baxj08f0wsb8y"]
+
+[ext_resource type="Script" uid="uid://b02rh4sb3poie" path="res://killzone.gd" id="1_3brf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+
+[node name="Killzone" type="Area2D" unique_id=1089587112]
+script = ExtResource("1_3brf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=634039975]
+shape = SubResource("RectangleShape2D_3xd07")
+debug_color = Color(1, 0.4, 0.29803923, 0.41960785)

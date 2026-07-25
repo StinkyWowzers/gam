@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://biv7mr4cfj67w"]
+
+[ext_resource type="Script" uid="uid://djwml6r415e6p" path="res://parryableobject.gd" id="1_1yx4r"]
+[ext_resource type="Texture2D" uid="uid://cfv275be8xn5n" path="res://parryableobject.png" id="2_ngrdr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+size = Vector2(72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xt18k"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(0, 0, 1080, 1160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kokdx"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(1080, 0, 1080, 1160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3o7p"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(2160, 0, 1080, 1160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gre1t"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(3240, 0, 1080, 1160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c3jk"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(4320, 0, 1080, 1160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thtfc"]
+atlas = ExtResource("2_ngrdr")
+region = Rect2(0, 0, 1080, 1160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xt18k")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kokdx")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_w3o7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gre1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c3jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thtfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c3jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thtfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c3jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thtfc")
+}],
+"loop": 0,
+"name": &"parry",
+"speed": 10.0
+}]
+
+[node name="Parryableobject" type="Area2D" unique_id=407282671]
+z_index = -2
+script = ExtResource("1_1yx4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438063705]
+shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805355449]
+texture_filter = 1
+position = Vector2(4.887581e-06, 0.07407856)
+scale = Vector2(0.06666666, 0.066666655)
+sprite_frames = SubResource("SpriteFrames_3xd07")
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

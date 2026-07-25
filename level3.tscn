@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://d17smua4bhdre"]
+
+[ext_resource type="Texture2D" uid="uid://ctbmcxr3d8ts5" path="res://dashinstructions.png" id="1_o2ccw"]
+[ext_resource type="PackedScene" uid="uid://uq2do0kfbrcy" path="res://player.tscn" id="2_qrujo"]
+[ext_resource type="PackedScene" uid="uid://baxj08f0wsb8y" path="res://killzone.tscn" id="3_qrujo"]
+[ext_resource type="PackedScene" uid="uid://bwc83nrwr4fbp" path="res://level exit.tscn" id="4_an40m"]
+[ext_resource type="PackedScene" uid="uid://82053piygwph" path="res://level4.tscn" id="5_mu84n"]
+[ext_resource type="PackedScene" uid="uid://c43pa7h12f2h8" path="res://breakable block.tscn" id="6_mu84n"]
+[ext_resource type="Texture2D" uid="uid://do1ggvjhc5ky4" path="res://spike.png" id="7_bmsap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lcx6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_an40m"]
+
+[node name="Level3" type="Node2D" unique_id=929820381]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=919197885]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=63302380]
+position = Vector2(-609, 110.99999)
+scale = Vector2(51.018444, -13.390864)
+shape = SubResource("RectangleShape2D_5lcx6")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D" unique_id=1669426825]
+offset_left = -10.003695
+offset_top = 9.621228
+offset_right = 9.996305
+offset_bottom = 29.621227
+scale = Vector2(1, -2.3414254)
+color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1290216764]
+position = Vector2(728, 302)
+scale = Vector2(51.018444, -32.510868)
+shape = SubResource("RectangleShape2D_5lcx6")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D5" unique_id=1714611450]
+offset_left = -10.003695
+offset_top = 9.621228
+offset_right = 9.996305
+offset_bottom = 29.621227
+scale = Vector2(1, -14.821575)
+color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1619613884]
+position = Vector2(-1375.0001, -1516.0001)
+scale = Vector2(34.428925, -162.42625)
+shape = SubResource("RectangleShape2D_an40m")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D2" unique_id=1389807998]
+offset_left = -9.533429
+offset_top = -9.533429
+offset_right = 10.725108
+offset_bottom = 10.725108
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=10167441]
+position = Vector2(0, -302)
+scale = Vector2(112.45845, -1.8708631)
+shape = SubResource("RectangleShape2D_5lcx6")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D3" unique_id=1838990757]
+offset_left = -9.994802
+offset_top = 286.49878
+offset_right = 10.005198
+offset_bottom = 306.49878
+scale = Vector2(1, -14.821575)
+color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2056487583]
+position = Vector2(1243.0001, -1516.0001)
+scale = Vector2(34.428925, -162.42625)
+shape = SubResource("RectangleShape2D_an40m")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D4" unique_id=2056583910]
+offset_left = -9.533429
+offset_top = -9.533429
+offset_right = 10.725108
+offset_bottom = 10.725108
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Dashinstructions" type="Sprite2D" parent="." unique_id=1085220944]
+texture_filter = 1
+position = Vector2(-354, 25.999998)
+scale = Vector2(0.40495875, 0.40495872)
+texture = ExtResource("1_o2ccw")
+
+[node name="Player" parent="." unique_id=1844652937 instance=ExtResource("2_qrujo")]
+position = Vector2(-793, -64)
+dash_time = 0.5
+
+[node name="Killzone" parent="." unique_id=1089587112 instance=ExtResource("3_qrujo")]
+position = Vector2(12, 216)
+scale = Vector2(-92.70221, 2.823106)
+
+[node name="LevelExit" parent="." unique_id=2118921138 instance=ExtResource("4_an40m")]
+position = Vector2(710, -83)
+next_level = ExtResource("5_mu84n")
+
+[node name="BreakableBlock" parent="." unique_id=1145770515 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -33)
+
+[node name="BreakableBlock2" parent="." unique_id=987357108 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -53)
+
+[node name="BreakableBlock3" parent="." unique_id=75695778 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -73)
+
+[node name="BreakableBlock4" parent="." unique_id=973690921 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -93)
+
+[node name="BreakableBlock5" parent="." unique_id=571807406 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -113)
+
+[node name="BreakableBlock6" parent="." unique_id=519752896 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -133)
+
+[node name="BreakableBlock7" parent="." unique_id=1856779707 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -153)
+
+[node name="BreakableBlock8" parent="." unique_id=948190315 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -173)
+
+[node name="BreakableBlock9" parent="." unique_id=344491378 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -193)
+
+[node name="BreakableBlock10" parent="." unique_id=1998451821 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -213)
+
+[node name="BreakableBlock11" parent="." unique_id=238281798 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -233)
+
+[node name="BreakableBlock12" parent="." unique_id=1588009482 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -253)
+
+[node name="BreakableBlock13" parent="." unique_id=1895088084 instance=ExtResource("6_mu84n")]
+position = Vector2(228, -273)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=158106630]
+offset_left = -130.0
+offset_top = 231.0
+offset_right = 291.0
+offset_bottom = 271.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="Spike2" type="Sprite2D" parent="." unique_id=2025864414]
+texture_filter = 1
+position = Vector2(-75, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")
+
+[node name="Spike3" type="Sprite2D" parent="." unique_id=818014286]
+texture_filter = 1
+position = Vector2(-20, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")
+
+[node name="Spike4" type="Sprite2D" parent="." unique_id=1132499961]
+texture_filter = 1
+position = Vector2(35.000004, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")
+
+[node name="Spike5" type="Sprite2D" parent="." unique_id=1007485366]
+texture_filter = 1
+position = Vector2(89, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")
+
+[node name="Spike6" type="Sprite2D" parent="." unique_id=1364174700]
+texture_filter = 1
+position = Vector2(140, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")
+
+[node name="Spike7" type="Sprite2D" parent="." unique_id=1478683106]
+texture_filter = 1
+position = Vector2(194.00002, 207)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_bmsap")

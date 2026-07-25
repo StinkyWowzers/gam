@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://bxyjh36cbq3"]
+
+[ext_resource type="PackedScene" uid="uid://biv7mr4cfj67w" path="res://parryableobject.tscn" id="1_gbh3r"]
+[ext_resource type="PackedScene" uid="uid://uq2do0kfbrcy" path="res://player.tscn" id="2_lcda4"]
+[ext_resource type="Texture2D" uid="uid://do1ggvjhc5ky4" path="res://spike.png" id="3_4ldn4"]
+[ext_resource type="PackedScene" uid="uid://baxj08f0wsb8y" path="res://killzone.tscn" id="4_lwjda"]
+[ext_resource type="Texture2D" uid="uid://c8eti0s5qio15" path="res://parryinstructions.png" id="5_lwjda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ldn4"]
+size = Vector2(5.962691, 20)
+
+[node name="Level5" type="Node2D" unique_id=1104287655]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1379801878]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=583403264]
+scale = Vector2(105.80397, 3.0074506)
+shape = SubResource("RectangleShape2D_4ldn4")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D" unique_id=589949617]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+scale = Vector2(1, 13.036774)
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1867439102]
+position = Vector2(455, 99.00001)
+scale = Vector2(41.443974, 71.96846)
+shape = SubResource("RectangleShape2D_4ldn4")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D5" unique_id=1191932769]
+offset_left = -3.1608934
+offset_top = -9.975221
+offset_right = 16.839108
+offset_bottom = 10.024779
+scale = Vector2(2.074096, 13.985439)
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1970421948]
+position = Vector2(-410.00003, -244)
+rotation = 1.5707964
+scale = Vector2(358.95905, -21.317196)
+shape = SubResource("RectangleShape2D_4ldn4")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D2" unique_id=947387813]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+scale = Vector2(0.99796516, 1)
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1443973671]
+position = Vector2(754, -183.99998)
+rotation = -1.5707964
+scale = Vector2(358.95905, -21.317196)
+shape = SubResource("RectangleShape2D_4ldn4")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D7" unique_id=419374222]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1546307325]
+position = Vector2(-20.999985, -822.99994)
+rotation = -3.1415925
+scale = Vector2(205.14326, 2.8308704)
+shape = SubResource("RectangleShape2D_4ldn4")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D6" unique_id=584724964]
+offset_left = -3.5546212
+offset_top = -10.000004
+offset_right = 16.44538
+offset_bottom = 9.999996
+scale = Vector2(0.621727, 33.967205)
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Parryableobject" parent="." unique_id=407282671 instance=ExtResource("1_gbh3r")]
+position = Vector2(147, -75)
+scale = Vector2(-1.055311, -1.055311)
+bounce_force = 1000.0
+
+[node name="Player" parent="." unique_id=1844652937 instance=ExtResource("2_lcda4")]
+position = Vector2(-162, -65)
+parry_window = 0.5
+
+[node name="Spike" type="Sprite2D" parent="." unique_id=146246084]
+texture_filter = 1
+position = Vector2(316.8437, -44.000004)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike2" type="Sprite2D" parent="." unique_id=1239859008]
+texture_filter = 1
+position = Vector2(316.8437, -72.00001)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike3" type="Sprite2D" parent="." unique_id=759256872]
+texture_filter = 1
+position = Vector2(316.77338, -100.09091)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike4" type="Sprite2D" parent="." unique_id=423765453]
+texture_filter = 1
+position = Vector2(316.77338, -128.09093)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike5" type="Sprite2D" parent="." unique_id=1723011343]
+texture_filter = 1
+position = Vector2(316.8437, -155.99998)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike6" type="Sprite2D" parent="." unique_id=1020680639]
+texture_filter = 1
+position = Vector2(316.8437, -183.99998)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike7" type="Sprite2D" parent="." unique_id=150897687]
+texture_filter = 1
+position = Vector2(316.77338, -212.0909)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike8" type="Sprite2D" parent="." unique_id=736535116]
+texture_filter = 1
+position = Vector2(316.77338, -240.09091)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike9" type="Sprite2D" parent="." unique_id=295842493]
+texture_filter = 1
+position = Vector2(316.8437, -268.00003)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike10" type="Sprite2D" parent="." unique_id=1163353736]
+texture_filter = 1
+position = Vector2(316.8437, -296.00003)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike11" type="Sprite2D" parent="." unique_id=2059131596]
+texture_filter = 1
+position = Vector2(316.77338, -324.09094)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike12" type="Sprite2D" parent="." unique_id=1234578771]
+texture_filter = 1
+position = Vector2(316.77338, -352.09094)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike13" type="Sprite2D" parent="." unique_id=34319566]
+texture_filter = 1
+position = Vector2(316.8437, -380)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike14" type="Sprite2D" parent="." unique_id=1356116638]
+texture_filter = 1
+position = Vector2(316.8437, -408)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike15" type="Sprite2D" parent="." unique_id=304497549]
+texture_filter = 1
+position = Vector2(316.77338, -436.09094)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Spike16" type="Sprite2D" parent="." unique_id=920059204]
+texture_filter = 1
+position = Vector2(316.77338, -464.09094)
+rotation = -1.5707964
+scale = Vector2(0.27818173, 0.27546737)
+texture = ExtResource("3_4ldn4")
+
+[node name="Killzone" parent="." unique_id=1089587112 instance=ExtResource("4_lwjda")]
+position = Vector2(321, -255.00003)
+scale = Vector2(1.0450281, 22.279999)
+
+[node name="Parryinstructions" type="Sprite2D" parent="." unique_id=1142911830]
+texture_filter = 1
+position = Vector2(89, 15.999998)
+scale = Vector2(0.33272728, 0.33272728)
+texture = ExtResource("5_lwjda")

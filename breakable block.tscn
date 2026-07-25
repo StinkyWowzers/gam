@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c43pa7h12f2h8"]
+
+[ext_resource type="Script" uid="uid://8vgqwgo6q5v0" path="res://breakableblock.gd" id="1_1gmsj"]
+[ext_resource type="PackedScene" uid="uid://w2trijkncrqd" path="res://particle.tscn" id="2_p3o0a"]
+[ext_resource type="Texture2D" uid="uid://vf2jfwthm284" path="res://breakableblock.png" id="3_06t1l"]
+[ext_resource type="AudioStream" uid="uid://b5oyfmi100kot" path="res://concrete-breaking.mp3" id="4_gwo3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xd07"]
+
+[node name="BreakableBlock" type="StaticBody2D" unique_id=1145770515]
+script = ExtResource("1_1gmsj")
+particle_scene = ExtResource("2_p3o0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=997548974]
+shape = SubResource("RectangleShape2D_3xd07")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=55202874]
+texture_filter = 1
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.20000003, 0.20000003)
+texture = ExtResource("3_06t1l")
+
+[node name="BreakSound" type="AudioStreamPlayer2D" parent="." unique_id=165515932]
+stream = ExtResource("4_gwo3f")
